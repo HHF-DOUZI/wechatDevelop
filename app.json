@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/movie/movie",
+    "pages/classification/classification"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#D53E37",
+    "navigationBarTitleText": "网易严选",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true ,
+    "backgroundColor": "#111111"
+  },
+  "tabBar": {
+    "selectedColor": "#D53E37",
+    "backgroundColor": "#F5F5F5",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/cat.jpg",
+      "selectedIconPath": "images/cat.jpg"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "分类",
+      "iconPath": "images/koi.jpg",
+      "selectedIconPath": "images/koi.jpg"
+    },{
+      "pagePath": "pages/movie/movie",
+      "text": "购物车",
+      "iconPath": "images/Masked.jpg",
+      "selectedIconPath": "images/Masked.jpg"
+    },{
+      "pagePath": "pages/classification/classification",
+      "text": "个人",
+      "iconPath": "images/persion.jpg",
+      "selectedIconPath": "images/persion.jpg"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
