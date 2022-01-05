@@ -1,4 +1,72 @@
 <!--index.wxml-->
+ <!--搜索框 -->
+ <view class="weui-search-bar">
+ <view class="weui-search-bar__form">
+ <!--点击之后，出现input框 -->
+ <view class="weui-search-bar__box">
+ <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+ <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+ <!--输入款字数大于0，则显示清除按钮 -->
+ <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+ <icon type="clear" size="14"></icon>
+ </view>
+ </view>
+ <!--没点击之前，只是一些文字和图标 -->
+ <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+ <icon class="weui-icon-search" type="search" size="14"></icon>
+ <view class="weui-search-bar__text">搜索</view>
+ </label>
+ </view>
+ <!--动态出现的“取消”键 -->
+ <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>美食酒水</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>居家生活</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>服饰鞋包</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>个护清洁</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>数码家电</view>
+  </view> 
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>首单0元</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>话费充值</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>新人福利</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>签到红包</view>
+  </view>
+  <view class="nav-item">
+    <view><image src="../../images/cat.jpg" style="width: 25px; height: 23px;"></image></view>
+    <view>免费水果</view>
+  </view> 
+</view>
+
 <view class="container">
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
@@ -7,17 +75,9 @@
       </view>
       <open-data type="userNickName"></open-data>
     </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
