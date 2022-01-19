@@ -9,7 +9,25 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+
+    // banner
+    imgUrls: [
+      '../../images/cat.jpg',
+      '../../images/koi.jpg',
+      '../../images/hammer.jpg'
+    ],
+    indicatorDots: true, //是否显示面板指示点
+    autoplay: true, //是否自动切换
+    interval: 3000, //自动切换时间间隔,3s
+    duration: 1000, //  滑动动画时长1s
+  },
+
+  durationChange:function(e)
+  {
+    this.setData({
+      duration: e.detail.value
+    })
   },
   // 事件处理函数
   bindViewTap() {
@@ -46,3 +64,4 @@ Page({
     })
   }
 })
+

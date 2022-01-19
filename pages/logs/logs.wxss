@@ -1,8 +1,20 @@
-.log-list {
+page{
   display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+  justify-content: left;
 }
-.log-item {
-  margin: 10rpx;
+
+.searchbox{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  width: 250px;
+  height: 30px;
+  align-items: center;
+}
+
+input{
+  nav-left: 12px;
+  width: 200px;
+  font-size: 20px;
 }

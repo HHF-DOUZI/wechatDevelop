@@ -1,6 +1,25 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log.date}}</text>
-  </block>
+<view class="searchbox">
+<input placeholder="请输入搜索" bindinput="getInput" value="{{val}}"></input>
+<icon type="search" wx:if="{{isSearch}}"></icon>
+<icon type="clear"  wx:if="{{isClear}}" bindtap="clearTap"></icon>
+</view>
+
+<view class="flex-wrp" style="display: flex; height: 300px; flex-direction: column;">
+<!-- 左边 -->
+<view scroll-y="true">
+<view>为你推荐</view>
+<view>居家生活</view>
+<view>服饰鞋包</view>
+<view>美食酒水</view>
+<view>个护清洁</view>
+<view>母婴亲子</view>
+<view>运动旅行</view>
+<view>数码家电</view>
+<view>全球特色</view>
+</view>
+
+<!-- 右边 -->
+<scroll-view scroll-y="true">
+<view>爆款清单</view>
+</scroll-view>
 </view>
