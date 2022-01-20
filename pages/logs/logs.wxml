@@ -1,25 +1,101 @@
-<view class="searchbox">
-<input placeholder="请输入搜索" bindinput="getInput" value="{{val}}"></input>
-<icon type="search" wx:if="{{isSearch}}"></icon>
-<icon type="clear"  wx:if="{{isClear}}" bindtap="clearTap"></icon>
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='方法名a'>搜索</view>
+        </view>
+    </view>
 </view>
 
-<view class="flex-wrp" style="display: flex; height: 300px; flex-direction: column;">
-<!-- 左边 -->
-<view scroll-y="true">
-<view>为你推荐</view>
-<view>居家生活</view>
-<view>服饰鞋包</view>
-<view>美食酒水</view>
-<view>个护清洁</view>
-<view>母婴亲子</view>
-<view>运动旅行</view>
-<view>数码家电</view>
-<view>全球特色</view>
-</view>
+<view class="content">
+      <view class='left'>
+        <view class="{{flag==0?'select':'normal'}}" id='0' bindtap='switchNav'>为你推荐</view>
+        <view class="{{flag==1?'select':'normal'}}" id='1' bindtap='switchNav'>居家生活</view>
+        <view class="{{flag==2?'select':'normal'}}" id='2' bindtap='switchNav'>服饰鞋包</view>
+        <view class="{{flag==3?'select':'normal'}}" id='3' bindtap='switchNav'>美食酒水</view>
+        <view class="{{flag==4?'select':'normal'}}" id='4' bindtap='switchNav'>个护清洁</view>
+        <view class="{{flag==5?'select':'normal'}}" id='5' bindtap='switchNav'>母婴亲子</view>
+        <view class="{{flag==6?'select':'normal'}}" id='6' bindtap='switchNav'>运动旅行</view>
+        <view class="{{flag==7?'select':'normal'}}" id='7' bindtap='switchNav'>数码家电</view>
+        <view class="{{flag==8?'select':'normal'}}" id='8' bindtap='switchNav'>全球特色</view>
+      </view>
+      <view class='right'>
+        <view class='category'>
+          <swiper current='{{currentTab}}' style='height:500px' vertical="{{true}}">
+            <swiper-item id='0' catchtouchmove="stopTouchMove">
+              <scroll-view scroll-x="true"> 
+                <view class="banner" scroll-x="true"> 
+                   <view class="banner_Item"> 
+                    第一块
+                  </view> 
+                  <view class="banner_Item"> 
+                    第二块
+                  </view> 
+                </view> 
+              </scroll-view> 
+              <view>爆款清单</view>
+              <view>必囤年货</view>
+              <view>心意送礼</view>
+              <view>新年换新</view>
+              <view>必买清单</view>
+              <view>新品速递</view>
+              <view>铲屎官的自我修养</view>
+              <view>Z世代的过年图鉴</view>
+              <view>新机过年没出圈</view>
+            </swiper-item>
+            <swiper-item id='1' catchtouchmove="stopTouchMove">
+              <view>床品件套</view>
+            </swiper-item>
+            <swiper-item id='2' catchtouchmove="stopTouchMove">
+              <view>居家内搭</view>
+            </swiper-item>
+            <swiper-item id='3' catchtouchmove="stopTouchMove">
+              <view>饼干糕点</view>
+            </swiper-item>
+            <swiper-item id='4' catchtouchmove="stopTouchMove">
+              <scroll-view scroll-x="true"> 
+                <view class="banner" scroll-x="true"> 
+                   <view class="banner_Item"> 
+                    第一块
+                  </view> 
+                  <view class="banner_Item"> 
+                    第二块
+                  </view> 
+                </view> 
+              </scroll-view> 
+              <view>尖货大赏</view>
+            </swiper-item>
+            <swiper-item id='5' catchtouchmove="stopTouchMove">
+              <view>婴童精选</view>
+            </swiper-item>
+            <swiper-item id='6' catchtouchmove="stopTouchMove">
+              <view>行李箱</view>
+            </swiper-item>
+            <swiper-item id='7' catchtouchmove="stopTouchMove">
+              <scroll-view scroll-x="true"> 
+                <view class="banner" scroll-x="true"> 
+                   <view class="banner_Item"> 
+                    第一块
+                  </view> 
+                  <view class="banner_Item"> 
+                    第二块
+                  </view> 
+                </view> 
+              </scroll-view> 
+              <view>品质尖货</view>
+            </swiper-item>
+            <swiper-item id='8' catchtouchmove="stopTouchMove">
+              <view>新品尝鲜</view>
+            </swiper-item>
+          </swiper>
+        </view>
+      </view>
+    </view>
 
-<!-- 右边 -->
-<scroll-view scroll-y="true">
-<view>爆款清单</view>
-</scroll-view>
-</view>

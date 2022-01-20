@@ -1,20 +1,155 @@
-page{
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: left;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
 }
 
-.searchbox{
+/* pages/classify/classify.wxss */
+/*.content {
   display: flex;
   flex-direction: row;
-  border: 1px solid #aaa;
-  border-radius: 20px;
-  width: 250px;
-  height: 30px;
+  font-family: "Microsoft YaHei"
+}
+.left {
+  width: 30%;
+  font-size: 10px;
+  height: 500px;
+  background-color: #F4F4F4;
+}
+.left view {
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+.select {
+  background-color: #ffffff;
+  border-left: 2px solid #36AE66;
+  font-weight: bold;
+  color: #36AE66;
+}
+.normal {
+  background-color: #F4F4F4;
+  border-bottom: 1px solid #f2f2f2;
+}
+.right {
+  width: 100%;
+  margin: 0px;
+}
+ 
+.category{
+  width: 300px;
+  height: 150px;
+}
+ 
+.category-view{
+  width: 90px;
+  height: 120px;
+  margin: 5px;
+}
+ 
+.category-view-left{
+  width: 90px;
+  height: 90px;
+}
+ 
+.image{
+  width: 60px;
+  margin: 10px 13px;
+  height: 65px;
+}
+ 
+.category-view-right{
+  width: 94%;
+  height: 20px;
+  margin: 3px auto;
+  font-size: 12px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}*/
+
+/* zuanjia */
+.content {
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei"
+}
+.left {
+  width: 30%;
+  font-size: 10px;
+  height: 624px;
+  background-color: #F4F4F4;
+}
+.left view {
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+.select {
+  background-color: #ffffff;
+  border-left: 2px solid #36AE66;
+  font-weight: bold;
+  color: red;
+}
+.normal {
+  background-color: #F4F4F4;
+  border-bottom: 1px solid #f2f2f2;
+}
+.right {
+  width: 70%;
+  margin: 0px;
 }
 
-input{
-  nav-left: 12px;
-  width: 200px;
-  font-size: 20px;
-}
+/* 广告 */
+.banner{
+  height:160rpx; 
+  width:100%;
+  display: flex;
+  display: -webkit-box;
+  flex-direction: column;
+} 
+.banner_Item{ 
+ width: 160rpx;
+ height: 160rpx;
+ background-color:rgb(0, 255, 115);
+ margin-right:10rpx;
+} 
